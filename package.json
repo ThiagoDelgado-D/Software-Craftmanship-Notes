@@ -2,21 +2,58 @@
   "name": "software-craftsmanship-notes",
   "version": "1.0.0",
   "description": "Software craftsmanship notes with practical examples",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "modules/*",
+    "labs/*"
+  ],
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "vitest"
+    "dev": "yarn workspace @craftsman/tdd-service dev",
+    "build": "yarn workspaces run build",
+    "clean": "yarn workspaces run clean",
+    "test": "yarn workspaces run test",
+    "test:watch": "yarn workspaces run test:watch",
+    "test:coverage": "yarn workspaces run test:coverage",
+    "lint": "yarn workspaces run lint",
+    "lint:fix": "yarn workspaces run lint:fix",
+    "format": "yarn workspaces run format",
+    "format:check": "yarn workspaces run format:check",
+    "type-check": "yarn workspaces run type-check",
+    "install:all": "yarn install",
+    "workspace": "yarn workspace"
   },
-    "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.0.0",
-    "prettier": "^3.0.0",
-    "typescript": "^5.0.0",
-    "vitest": "^1.0.0"
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "tsx": "^4.6.0",
+    "rimraf": "^5.0.5"
   },
+  "keywords": [
+    "clean-code",
+    "clean-architecture",
+    "tdd",
+    "typescript",
+    "software-development",
+    "best-practices",
+    "pragmatic-programmer",
+    "yarn-workspaces",
+    "monorepo"
+  ],
   "author": "Thiago Delgado",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  }
 }
