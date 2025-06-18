@@ -1,0 +1,36 @@
+{
+  "name": "@craftsman/typescript-core",
+  "version": "1.0.0",
+  "description": "TypeScript core concepts, advanced features and best practices",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,md}",
+    "format:check": "prettier --check src/**/*.{ts,tsx,js,jsx,json,md}",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "typescript",
+    "type-system",
+    "advanced-typescript",
+    "programming"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
+
